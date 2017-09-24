@@ -1,4 +1,4 @@
-﻿namespace ContosoConsultancy.Model
+﻿namespace ContosoConsultancy.Core.Model
 {
     public class CustomerContact
     {
@@ -8,6 +8,7 @@
         public string Phone { get; set; }
         public string Email { get; set; }
         public string Title { get; set; }
-        public Customer Company { get; set; }
+
+        public Customer Customer { get; set; }
     }
 }

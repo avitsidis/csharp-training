@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ContosoConsultancy.Model
+namespace ContosoConsultancy.Core.Model
 {
     public class Mission
     {
         public long Id { get; set; }
+
         public Consultant Consultant { get; set; }
         public Customer Customer { get; set; }
         public DateTime StartDate { get; set; }

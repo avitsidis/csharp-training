@@ -1,13 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoConsultancy.Api", "src\ContosoConsultancy.Api\ContosoConsultancy.Api.csproj", "{D8ACDF6C-9257-44FB-A00A-B9DF3E0D4D20}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoConsultancy.DataAccess", "src\ContosoConsultancy.DataAccess\ContosoConsultancy.DataAccess.csproj", "{C177A379-0115-472C-B143-EB1A26CF3CE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoConsultancy.Model", "src\ContosoConsultancy.Model\ContosoConsultancy.Model.csproj", "{1145C29C-BE30-4616-B3BA-0730DEFF18F1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoConsultancy.Core", "src\ContosoConsultancy.Core\ContosoConsultancy.Core.csproj", "{204941B0-AF12-4815-B22C-7E0CC4D54158}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoConsultancy.Rest", "src\ContosoConsultancy.Rest\ContosoConsultancy.Rest.csproj", "{AC669B41-2C88-41EA-AB75-1C738B37DA09}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2086F8D0-1D62-4189-A722-B67728058E9F}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,20 +20,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D8ACDF6C-9257-44FB-A00A-B9DF3E0D4D20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D8ACDF6C-9257-44FB-A00A-B9DF3E0D4D20}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D8ACDF6C-9257-44FB-A00A-B9DF3E0D4D20}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D8ACDF6C-9257-44FB-A00A-B9DF3E0D4D20}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C177A379-0115-472C-B143-EB1A26CF3CE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C177A379-0115-472C-B143-EB1A26CF3CE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C177A379-0115-472C-B143-EB1A26CF3CE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C177A379-0115-472C-B143-EB1A26CF3CE4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1145C29C-BE30-4616-B3BA-0730DEFF18F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1145C29C-BE30-4616-B3BA-0730DEFF18F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1145C29C-BE30-4616-B3BA-0730DEFF18F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1145C29C-BE30-4616-B3BA-0730DEFF18F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{204941B0-AF12-4815-B22C-7E0CC4D54158}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{204941B0-AF12-4815-B22C-7E0CC4D54158}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{204941B0-AF12-4815-B22C-7E0CC4D54158}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{204941B0-AF12-4815-B22C-7E0CC4D54158}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC669B41-2C88-41EA-AB75-1C738B37DA09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC669B41-2C88-41EA-AB75-1C738B37DA09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC669B41-2C88-41EA-AB75-1C738B37DA09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC669B41-2C88-41EA-AB75-1C738B37DA09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9BAFF41C-AF86-4467-8254-CFAB8E37E4AB}
 	EndGlobalSection
 EndGlobal

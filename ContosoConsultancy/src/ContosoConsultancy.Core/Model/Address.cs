@@ -1,8 +1,7 @@
-﻿namespace ContosoConsultancy.Model
+﻿namespace ContosoConsultancy.Core.Model
 {
     public class Address
     {
-        public long Id { get; set; }
         public string Street { get; set; }
         public string Number { get; set; }
         public string PostCode { get; set; }
