@@ -7,7 +7,7 @@ namespace ContosoConsultancy.Core.Model
         public long Id { get; set; }
         public string Name { get; set; }
         public Address Address { get; set; }
-        public List<CustomerContact> Contacts { get; set; }
+        public ICollection<CustomerContact> Contacts { get; set; }
         public Customer()
         {
             Address = new Address();

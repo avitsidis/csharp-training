@@ -9,8 +9,7 @@ namespace ContosoConsultancy.DataAccess.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
-
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(ContosoConsultancy.DataAccess.ContosoConsultancyDataContext context)

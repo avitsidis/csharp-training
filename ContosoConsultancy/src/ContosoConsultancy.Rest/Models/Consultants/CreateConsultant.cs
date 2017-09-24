@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
 
-namespace ContosoConsultancy.Core.Model
+namespace ContosoConsultancy.Rest.Models.Consultants
 {
-    public class Consultant
+    public class CreateConsultant
     {
-        public long Id { get; set; }
         [Required]
         public string Name { get; set; }
         [Required]
@@ -16,13 +15,5 @@ namespace ContosoConsultancy.Core.Model
         [Required]
         public DateTime HireDate { get; set; }
         public DateTime? DisengagedDate { get; set; }
-
-        public ICollection<Mission> Missions { get; set; }
-        public Team Team { get; set; }
-
-        public Consultant()
-        {
-            Missions = new List<Mission>();
-        }
     }
 }

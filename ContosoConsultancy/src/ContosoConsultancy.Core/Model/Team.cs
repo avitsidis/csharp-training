@@ -7,7 +7,7 @@ namespace ContosoConsultancy.Core.Model
         public long Id { get; set; }
         public string Name { get; set; }
         public Consultant Manager { get; set; }
-        public List<Consultant> Members { get; set; }
+        public ICollection<Consultant> Members { get; set; }
         
     }
 }

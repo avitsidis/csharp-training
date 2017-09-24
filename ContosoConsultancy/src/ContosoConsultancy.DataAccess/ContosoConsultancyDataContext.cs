@@ -1,11 +1,6 @@
 ﻿using ContosoConsultancy.Core.Model;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ContosoConsultancy.DataAccess
 {
@@ -15,10 +10,24 @@ namespace ContosoConsultancy.DataAccess
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Mission> Missions { get; set; }
 
+        public ContosoConsultancyDataContext() : base("ContosoConsultancyDataContext")
+        {
+
+        }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+
+            modelBuilder.Entity<Consultant>()
+                .HasOptional<Team>(c => c.Team)
+                .WithMany(t => t.Members);
+
+            modelBuilder.Entity<Consultant>()
+                .HasMany<Mission>(c => c.Missions)
+                .WithOptional(m => m.Consultant);
+
         }
 
     }

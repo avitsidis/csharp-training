@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
+﻿using ContosoConsultancy.Core.Model;
+using ContosoConsultancy.DataAccess;
+using ContosoConsultancy.Rest.Models.Consultants;
+using System;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
-using ContosoConsultancy.Core.Model;
-using ContosoConsultancy.DataAccess;
 
 namespace ContosoConsultancy.Rest.Controllers
 {
@@ -37,49 +32,23 @@ namespace ContosoConsultancy.Rest.Controllers
             return Ok(consultant);
         }
 
-        // PUT: api/Consultants/5
-        [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutConsultant(long id, Consultant consultant)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            if (id != consultant.Id)
-            {
-                return BadRequest();
-            }
-
-            db.Entry(consultant).State = EntityState.Modified;
-
-            try
-            {
-                await db.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ConsultantExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return StatusCode(HttpStatusCode.NoContent);
-        }
-
         // POST: api/Consultants
         [ResponseType(typeof(Consultant))]
-        public async Task<IHttpActionResult> PostConsultant(Consultant consultant)
+        public async Task<IHttpActionResult> PostConsultant(CreateConsultant createConsultant)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
+
+            Consultant consultant = new Consultant
+            {
+                Name = createConsultant.Name,
+                FirstName = createConsultant.FirstName,
+                BirthDate = createConsultant.BirthDate,
+                HireDate = createConsultant.HireDate,
+                DisengagedDate = createConsultant.DisengagedDate
+            };
 
             db.Consultants.Add(consultant);
             await db.SaveChangesAsync();
@@ -112,9 +81,5 @@ namespace ContosoConsultancy.Rest.Controllers
             base.Dispose(disposing);
         }
 
-        private bool ConsultantExists(long id)
-        {
-            return db.Consultants.Count(e => e.Id == id) > 0;
-        }
     }
 }
