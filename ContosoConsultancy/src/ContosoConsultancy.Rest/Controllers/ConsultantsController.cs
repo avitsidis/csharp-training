@@ -2,7 +2,6 @@
 using ContosoConsultancy.DataAccess;
 using ContosoConsultancy.Rest.Mappers;
 using ContosoConsultancy.Rest.Models.Consultants;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -18,9 +17,21 @@ namespace ContosoConsultancy.Rest.Controllers
         private ConsultantMapper Map => new ConsultantMapper(Url);
 
         // GET: api/Consultants
-        public IEnumerable<ConsultantModel> GetConsultants()
+        public IEnumerable<ConsultantModel> GetConsultants([FromUri]SearchConsultantModel search)
         {
-            return db.Consultants.Select(Map.ToModel).ToList();
+            IQueryable<Consultant> consultant = db.Consultants;
+            //TODO 1.0 somenthing must be wrong here !
+            if (!string.IsNullOrEmpty(search.Name))
+            {
+                consultant.Where(c => c.Name.Contains(search.Name));
+            }
+            if (!string.IsNullOrEmpty(search.FirstName))
+            {
+                consultant.Where(c => c.FirstName.Contains(search.FirstName));
+            }
+            //TODO 1.1 must be done on teamName too
+
+            return consultant.Select(Map.ToModel).ToList();
         }
 
         // GET: api/Consultants/5
