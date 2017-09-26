@@ -30,5 +30,6 @@ namespace ContosoConsultancy.DataAccess
 
         }
 
+        public System.Data.Entity.DbSet<ContosoConsultancy.Core.Model.Team> Teams { get; set; }
     }
 }

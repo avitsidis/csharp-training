@@ -105,10 +105,16 @@
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ConsultantsController.cs" />
+    <Compile Include="Controllers\TeamsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Consultants\CreateConsultant.cs" />
+    <Compile Include="Mappers\ConsultantMapper.cs" />
+    <Compile Include="Mappers\TeamMapper.cs" />
+    <Compile Include="Models\Consultants\ConsultantModel.cs" />
+    <Compile Include="Models\Consultants\CreateConsultantModel.cs" />
+    <Compile Include="Models\Shared\ResourceReference.cs" />
+    <Compile Include="Models\Teams\TeamModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

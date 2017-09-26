@@ -1,10 +1,9 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
 
 namespace ContosoConsultancy.Rest.Models.Consultants
 {
-    public class CreateConsultant
+    public class CreateConsultantModel
     {
         [Required]
         public string Name { get; set; }

@@ -44,6 +44,7 @@
     <Compile Include="Model\Address.cs" />
     <Compile Include="Model\Competency.cs" />
     <Compile Include="Model\Consultant.cs" />
+    <Compile Include="Model\ConsultantExperience.cs" />
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\CustomerContact.cs" />
     <Compile Include="Model\Mission.cs" />
