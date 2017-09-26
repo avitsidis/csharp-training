@@ -12,5 +12,10 @@ namespace ContosoConsultancy.Core.Model
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public ICollection<Competency> Competencies { get; set; }
+
+        public Mission()
+        {
+            Competencies = new List<Competency>();
+        }
     }
 }
