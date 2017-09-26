@@ -12,7 +12,11 @@ namespace ContosoConsultancy.Rest.Controllers
 {
     public class ConsultantsController : ApiController
     {
-        private ContosoConsultancyDataContext db = new ContosoConsultancyDataContext();
+        public ConsultantsController(ContosoConsultancyDataContext db)
+        {
+            this.db = db;
+        }
+        private ContosoConsultancyDataContext db;
 
         private ConsultantMapper Map => new ConsultantMapper(Url);
 

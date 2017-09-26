@@ -13,8 +13,13 @@ namespace ContosoConsultancy.Rest.Controllers
 {
     public class TeamsController : ApiController
     {
-        private ContosoConsultancyDataContext db = new ContosoConsultancyDataContext();
         private TeamMapper Map => new TeamMapper(Url);
+
+        public TeamsController(ContosoConsultancyDataContext db)
+        {
+            this.db = db;
+        }
+        private ContosoConsultancyDataContext db;
 
         // GET: api/Teams
         public IEnumerable<TeamModel> GetTeams()

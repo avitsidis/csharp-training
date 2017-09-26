@@ -6,9 +6,10 @@ namespace ContosoConsultancy.DataAccess
 {
     public class ContosoConsultancyDataContext : DbContext
     {
-        public DbSet<Consultant> Consultants { get; set; }
-        public DbSet<Customer> Customers { get; set; }
-        public DbSet<Mission> Missions { get; set; }
+        public virtual DbSet<Consultant> Consultants { get; set; }
+        public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<Mission> Missions { get; set; }
+        public virtual DbSet<Team> Teams { get; set; }
 
         public ContosoConsultancyDataContext() : base("ContosoConsultancyDataContext")
         {
@@ -30,6 +31,6 @@ namespace ContosoConsultancy.DataAccess
 
         }
 
-        public System.Data.Entity.DbSet<ContosoConsultancy.Core.Model.Team> Teams { get; set; }
+        
     }
 }
