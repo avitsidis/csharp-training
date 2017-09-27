@@ -27,11 +27,11 @@ namespace ContosoConsultancy.Rest.Controllers
             //TODO 1.0 somenthing must be wrong here !
             if (!string.IsNullOrEmpty(search.Name))
             {
-                consultant.Where(c => c.Name.Contains(search.Name));
+                consultant.Where(c => c.Name.ToLower().Contains(search.Name.ToLower()));
             }
             if (!string.IsNullOrEmpty(search.FirstName))
             {
-                consultant.Where(c => c.FirstName.Contains(search.FirstName));
+                consultant.Where(c => c.FirstName.ToLower().Contains(search.FirstName.ToLower()));
             }
             //TODO 1.1 must be done on teamName too
 
