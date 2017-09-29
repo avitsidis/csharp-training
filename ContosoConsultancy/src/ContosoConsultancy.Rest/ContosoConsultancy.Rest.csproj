@@ -121,6 +121,7 @@
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ConsultantsController.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\TeamsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -130,6 +131,7 @@
     <Compile Include="Models\Consultants\ConsultantModel.cs" />
     <Compile Include="Models\Consultants\CreateConsultantModel.cs" />
     <Compile Include="Models\Consultants\SearchConsultantModel.cs" />
+    <Compile Include="Models\Dashboard\MissionModel.cs" />
     <Compile Include="Models\Shared\ResourceReference.cs" />
     <Compile Include="Models\Teams\TeamModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

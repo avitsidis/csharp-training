@@ -29,6 +29,6 @@ Provide biggest clients in terms of current mission number.
 
 ###2.2: 3 Newest missions
 Provide the 3 latest missions. You must provide:
-Consultant Name, Consultant First Name, Customer Name, Customer country, Mission Start Date
+Consultant FullName, Customer Name, Customer country, Mission Start Date
 
 result must be ordered by mission Start date
