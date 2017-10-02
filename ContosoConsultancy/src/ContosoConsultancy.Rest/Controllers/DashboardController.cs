@@ -19,36 +19,32 @@ namespace ContosoConsultancy.Rest.Controllers
         }
         
         [Route("idleEmployeeCount")]
-        [ResponseType(typeof(int))]
-        public IHttpActionResult GetIdleEmployeeCount()
+        public int GetIdleEmployeeCount()
         {
             var count = 0;
-            return Ok(count);
+            return count;
         }
 
         [Route("topClient")]
-        [ResponseType(typeof(IEnumerable<string>))]
-        public IHttpActionResult GetTopClient(int numberOfClients=3)
+        public IEnumerable<CustomerModel> GetTopClient(int? numberOfClients)
         {
-            var result = new List<string>();
-            return Ok(result);
+            var result = new List<CustomerModel>();
+            return result;
         }
 
-        [Route("topMissions")]
-        [ResponseType(typeof(IEnumerable<MissionModel>))]
-        public IHttpActionResult GetNewestMission(int numberOfMissions = 3)
+        [Route("newestMissions")]
+        public IEnumerable<MissionModel> GetNewestMission(int numberOfMissions)
         {
             var result = new List<MissionModel>();
-            return Ok(result);
+            return result;
         }
 
 
-        [Route("avgConsultantContractDurationByYear")]
-        [ResponseType(typeof(IEnumerable<KeyValuePair< int,TimeSpan>>))]
-        public IHttpActionResult GetAverageConsutlantContractDuration(int numberOfYear)
+        [Route("hiredEmployeeByYear")]
+        public IEnumerable<KeyValuePair<int, int>> GetHiredEmployeeByYear()
         {
-            var result = new Dictionary<int, TimeSpan>();
-            return Ok(result);
+            var result = new Dictionary<int, int>();
+            return result;
         }
 
     }

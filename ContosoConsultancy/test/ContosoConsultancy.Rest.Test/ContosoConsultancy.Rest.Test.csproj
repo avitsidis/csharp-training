@@ -78,7 +78,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsultantsControllerTest.cs" />
+    <Compile Include="Controllers\ConsultantsControllerTest.cs" />
+    <Compile Include="Controllers\DashboardControllerTest.cs" />
+    <Compile Include="Controllers\TestHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -88,9 +90,7 @@
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\..\src\ContosoConsultancy.Core\ContosoConsultancy.Core.csproj">
       <Project>{204941b0-af12-4815-b22c-7e0cc4d54158}</Project>

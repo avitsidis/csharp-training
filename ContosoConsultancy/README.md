@@ -10,7 +10,7 @@ Users wants to search consultant based on their team name(exact name). You have 
 ##Exercice 2 : Linq - Aggregations
 Management would like a dashboard with real time company information such as:
 * number of consultant without a mission
-* duration of employee contracts
+* Number of hired employee each years
 * Top 5 clients
 * 3 Newest missions
 
@@ -19,10 +19,9 @@ As the dashboard will be available in a web application you have to implement a 
 ###2.2: number of consultant without a mission
 You must provide the number of consultants that do not have an active mission at the moment.
 
-###2.2: duration of employee contracts
-You must provide an object with 2 fields:
-* AllTimeEmployeesContractDuration: consider all consultants
-* CurrentEmployeesContractDuration: consider only consultant currently working for the company
+###2.2: Number of hired employee each years
+You must provide a map where key is year and value is the number of employee hired that year
+optionnal: If there is no employee we want an item in the map with value 0
 
 ###2.2: Top 5 clients
 Provide biggest clients in terms of current mission number.

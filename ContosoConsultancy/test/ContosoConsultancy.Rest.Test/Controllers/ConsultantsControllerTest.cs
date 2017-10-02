@@ -4,12 +4,11 @@ using ContosoConsultancy.Rest.Models.Consultants;
 using Moq;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Web.Http.Routing;
 using Xunit;
 
-namespace ContosoConsultancy.Rest.Test
+namespace ContosoConsultancy.Rest.Test.Controllers
 {
     public class ConsultantsControllerTest
     {
@@ -35,20 +34,10 @@ namespace ContosoConsultancy.Rest.Test
             }.AsQueryable();
         }
 
-        private Mock<DbSet<Consultant>> GetMockedDbSet(IQueryable<Consultant> mockData)
-        {
-            var consultantDBSetMock = new Mock<DbSet<Consultant>>();
-            consultantDBSetMock.As<IQueryable<Consultant>>().Setup(m => m.Provider).Returns(mockData.Provider);
-            consultantDBSetMock.As<IQueryable<Consultant>>().Setup(m => m.Expression).Returns(mockData.Expression);
-            consultantDBSetMock.As<IQueryable<Consultant>>().Setup(m => m.ElementType).Returns(mockData.ElementType);
-            consultantDBSetMock.As<IQueryable<Consultant>>().Setup(m => m.GetEnumerator()).Returns(mockData.GetEnumerator());
-            return consultantDBSetMock;
-        }
-
         private ConsultantsController GetConsultantsController(IQueryable<Consultant> consultants)
         {
             var dataContextMock = new Mock<DataAccess.ContosoConsultancyDataContext>();
-            var consultantDBSetMock = GetMockedDbSet(consultants);
+            var consultantDBSetMock = TestHelper.GetMockedDbSet(consultants);
             var urlHelperMock = new Mock<UrlHelper>();
             dataContextMock.Setup(m => m.Consultants).Returns(consultantDBSetMock.Object);
             urlHelperMock.Setup(u => u.Link(It.IsAny<string>(), It.IsAny<object>())).Returns("");
