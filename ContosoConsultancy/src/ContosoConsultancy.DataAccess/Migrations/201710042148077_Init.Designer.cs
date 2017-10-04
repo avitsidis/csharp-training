@@ -13,7 +13,7 @@ namespace ContosoConsultancy.DataAccess.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201709242105237_Init"; }
+            get { return "201710042148077_Init"; }
         }
         
         string IMigrationMetadata.Source

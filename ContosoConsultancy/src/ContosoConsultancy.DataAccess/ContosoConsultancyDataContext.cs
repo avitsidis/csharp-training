@@ -29,8 +29,12 @@ namespace ContosoConsultancy.DataAccess
                 .HasMany<Mission>(c => c.Missions)
                 .WithOptional(m => m.Consultant);
 
+            modelBuilder.Entity<Mission>()
+                .HasMany<Competency>(c => c.Competencies)
+                .WithMany();
+
         }
 
-        
+
     }
 }

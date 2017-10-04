@@ -24,5 +24,22 @@ namespace ContosoConsultancy.Core.Model
         {
             Missions = new List<Mission>();
         }
+
+        public Consultant(long id, string firstName,string name, DateTime birthdate, DateTime hireDate)
+            : this()
+        {
+            Id = id;
+            Name = name;
+            FirstName = firstName;
+            BirthDate = birthdate;
+            HireDate = hireDate;
+        }
+
+        public Consultant AddMission(Mission m)
+        {
+            m.Consultant = this;
+            Missions.Add(m);
+            return this;
+        }
     }
 }

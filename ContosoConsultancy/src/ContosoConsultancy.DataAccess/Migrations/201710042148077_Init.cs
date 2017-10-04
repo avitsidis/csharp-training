@@ -45,11 +45,8 @@ namespace ContosoConsultancy.DataAccess.Migrations
                     {
                         Id = c.Long(nullable: false, identity: true),
                         Name = c.String(),
-                        Mission_Id = c.Long(),
                     })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Missions", t => t.Mission_Id)
-                .Index(t => t.Mission_Id);
+                .PrimaryKey(t => t.Id);
             
             CreateTable(
                 "dbo.Customers",
@@ -67,22 +64,6 @@ namespace ContosoConsultancy.DataAccess.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.CustomerContacts",
-                c => new
-                    {
-                        Id = c.Long(nullable: false, identity: true),
-                        Name = c.String(),
-                        FirstName = c.String(),
-                        Phone = c.String(),
-                        Email = c.String(),
-                        Title = c.String(),
-                        Customer_Id = c.Long(),
-                    })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Customers", t => t.Customer_Id)
-                .Index(t => t.Customer_Id);
-            
-            CreateTable(
                 "dbo.Teams",
                 c => new
                     {
@@ -94,6 +75,19 @@ namespace ContosoConsultancy.DataAccess.Migrations
                 .ForeignKey("dbo.Consultants", t => t.Manager_Id)
                 .Index(t => t.Manager_Id);
             
+            CreateTable(
+                "dbo.MissionCompetencies",
+                c => new
+                    {
+                        Mission_Id = c.Long(nullable: false),
+                        Competency_Id = c.Long(nullable: false),
+                    })
+                .PrimaryKey(t => new { t.Mission_Id, t.Competency_Id })
+                .ForeignKey("dbo.Missions", t => t.Mission_Id, cascadeDelete: true)
+                .ForeignKey("dbo.Competencies", t => t.Competency_Id, cascadeDelete: true)
+                .Index(t => t.Mission_Id)
+                .Index(t => t.Competency_Id);
+            
         }
         
         public override void Down()
@@ -102,16 +96,16 @@ namespace ContosoConsultancy.DataAccess.Migrations
             DropForeignKey("dbo.Teams", "Manager_Id", "dbo.Consultants");
             DropForeignKey("dbo.Missions", "Consultant_Id", "dbo.Consultants");
             DropForeignKey("dbo.Missions", "Customer_Id", "dbo.Customers");
-            DropForeignKey("dbo.CustomerContacts", "Customer_Id", "dbo.Customers");
-            DropForeignKey("dbo.Competencies", "Mission_Id", "dbo.Missions");
+            DropForeignKey("dbo.MissionCompetencies", "Competency_Id", "dbo.Competencies");
+            DropForeignKey("dbo.MissionCompetencies", "Mission_Id", "dbo.Missions");
+            DropIndex("dbo.MissionCompetencies", new[] { "Competency_Id" });
+            DropIndex("dbo.MissionCompetencies", new[] { "Mission_Id" });
             DropIndex("dbo.Teams", new[] { "Manager_Id" });
-            DropIndex("dbo.CustomerContacts", new[] { "Customer_Id" });
-            DropIndex("dbo.Competencies", new[] { "Mission_Id" });
             DropIndex("dbo.Missions", new[] { "Consultant_Id" });
             DropIndex("dbo.Missions", new[] { "Customer_Id" });
             DropIndex("dbo.Consultants", new[] { "Team_Id" });
+            DropTable("dbo.MissionCompetencies");
             DropTable("dbo.Teams");
-            DropTable("dbo.CustomerContacts");
             DropTable("dbo.Customers");
             DropTable("dbo.Competencies");
             DropTable("dbo.Missions");
