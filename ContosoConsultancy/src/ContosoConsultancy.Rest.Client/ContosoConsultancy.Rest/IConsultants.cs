@@ -17,13 +17,19 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
     /// </summary>
     public partial interface IConsultants
     {
+        /// <param name='searchname'>
+        /// </param>
+        /// <param name='searchfirstName'>
+        /// </param>
+        /// <param name='searchteamName'>
+        /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
         /// </param>
         /// <param name='cancellationToken'>
         /// The cancellation token.
         /// </param>
-        Task<HttpOperationResponse<IList<ConsultantModel>>> GetConsultantsWithHttpMessagesAsync(Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<IList<ConsultantModel>>> GetConsultantsWithHttpMessagesAsync(string searchname = default(string), string searchfirstName = default(string), string searchteamName = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <param name='createConsultant'>
         /// </param>
         /// <param name='customHeaders'>

@@ -20,20 +20,32 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
-            public static IList<ConsultantModel> GetConsultants(this IConsultants operations)
+            /// <param name='searchname'>
+            /// </param>
+            /// <param name='searchfirstName'>
+            /// </param>
+            /// <param name='searchteamName'>
+            /// </param>
+            public static IList<ConsultantModel> GetConsultants(this IConsultants operations, string searchname = default(string), string searchfirstName = default(string), string searchteamName = default(string))
             {
-                return Task.Factory.StartNew(s => ((IConsultants)s).GetConsultantsAsync(), operations, CancellationToken.None, TaskCreationOptions.None, TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
+                return Task.Factory.StartNew(s => ((IConsultants)s).GetConsultantsAsync(searchname, searchfirstName, searchteamName), operations, CancellationToken.None, TaskCreationOptions.None, TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
+            /// <param name='searchname'>
+            /// </param>
+            /// <param name='searchfirstName'>
+            /// </param>
+            /// <param name='searchteamName'>
+            /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<IList<ConsultantModel>> GetConsultantsAsync(this IConsultants operations, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<IList<ConsultantModel>> GetConsultantsAsync(this IConsultants operations, string searchname = default(string), string searchfirstName = default(string), string searchteamName = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetConsultantsWithHttpMessagesAsync(null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetConsultantsWithHttpMessagesAsync(searchname, searchfirstName, searchteamName, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
