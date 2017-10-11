@@ -11,17 +11,19 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest.Models
     using Microsoft.Rest;
     using Microsoft.Rest.Serialization;
 
-    public partial class CustomerModel
+    public partial class ContosoConsultancyRestModelsDashboardCustomerModel
     {
         /// <summary>
-        /// Initializes a new instance of the CustomerModel class.
+        /// Initializes a new instance of the
+        /// ContosoConsultancyRestModelsDashboardCustomerModel class.
         /// </summary>
-        public CustomerModel() { }
+        public ContosoConsultancyRestModelsDashboardCustomerModel() { }
 
         /// <summary>
-        /// Initializes a new instance of the CustomerModel class.
+        /// Initializes a new instance of the
+        /// ContosoConsultancyRestModelsDashboardCustomerModel class.
         /// </summary>
-        public CustomerModel(long? id = default(long?), string name = default(string), int? numberOfMissions = default(int?), string country = default(string))
+        public ContosoConsultancyRestModelsDashboardCustomerModel(long? id = default(long?), string name = default(string), int? numberOfMissions = default(int?), string country = default(string))
         {
             Id = id;
             Name = name;

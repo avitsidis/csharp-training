@@ -11,17 +11,19 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest.Models
     using Microsoft.Rest;
     using Microsoft.Rest.Serialization;
 
-    public partial class KeyValuePairInt32Int32
+    public partial class SystemCollectionsGenericKeyValuePairSystemInt32SystemInt32
     {
         /// <summary>
-        /// Initializes a new instance of the KeyValuePairInt32Int32 class.
+        /// Initializes a new instance of the
+        /// SystemCollectionsGenericKeyValuePairSystemInt32SystemInt32 class.
         /// </summary>
-        public KeyValuePairInt32Int32() { }
+        public SystemCollectionsGenericKeyValuePairSystemInt32SystemInt32() { }
 
         /// <summary>
-        /// Initializes a new instance of the KeyValuePairInt32Int32 class.
+        /// Initializes a new instance of the
+        /// SystemCollectionsGenericKeyValuePairSystemInt32SystemInt32 class.
         /// </summary>
-        public KeyValuePairInt32Int32(int? key = default(int?), int? value = default(int?))
+        public SystemCollectionsGenericKeyValuePairSystemInt32SystemInt32(int? key = default(int?), int? value = default(int?))
         {
             Key = key;
             Value = value;

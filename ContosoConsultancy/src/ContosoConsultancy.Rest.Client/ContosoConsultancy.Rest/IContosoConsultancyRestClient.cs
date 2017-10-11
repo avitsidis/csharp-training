@@ -45,6 +45,11 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
         IConsultants Consultants { get; }
 
         /// <summary>
+        /// Gets the ICustomers.
+        /// </summary>
+        ICustomers Customers { get; }
+
+        /// <summary>
         /// Gets the IDashboard.
         /// </summary>
         IDashboard Dashboard { get; }

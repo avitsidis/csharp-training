@@ -48,6 +48,11 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
         public virtual IConsultants Consultants { get; private set; }
 
         /// <summary>
+        /// Gets the ICustomers.
+        /// </summary>
+        public virtual ICustomers Customers { get; private set; }
+
+        /// <summary>
         /// Gets the IDashboard.
         /// </summary>
         public virtual IDashboard Dashboard { get; private set; }
@@ -241,6 +246,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
         private void Initialize()
         {
             this.Consultants = new Consultants(this);
+            this.Customers = new Customers(this);
             this.Dashboard = new Dashboard(this);
             this.Teams = new Teams(this);
             this.BaseUri = new Uri("http://localhost:57216");

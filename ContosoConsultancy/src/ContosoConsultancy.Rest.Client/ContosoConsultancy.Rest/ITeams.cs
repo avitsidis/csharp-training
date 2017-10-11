@@ -27,7 +27,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
         /// <param name='cancellationToken'>
         /// The cancellation token.
         /// </param>
-        Task<HttpOperationResponse<TeamModel>> PostMemberWithHttpMessagesAsync(long id, long consultantId, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<ContosoConsultancyRestModelsTeamsTeamModel>> PostMemberWithHttpMessagesAsync(long id, long consultantId, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <param name='id'>
         /// </param>
         /// <param name='consultantId'>
@@ -38,7 +38,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
         /// <param name='cancellationToken'>
         /// The cancellation token.
         /// </param>
-        Task<HttpOperationResponse<TeamModel>> DeleteMemberWithHttpMessagesAsync(long id, long consultantId, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<ContosoConsultancyRestModelsTeamsTeamModel>> DeleteMemberWithHttpMessagesAsync(long id, long consultantId, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <param name='id'>
         /// </param>
         /// <param name='consultantId'>
@@ -49,14 +49,14 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
         /// <param name='cancellationToken'>
         /// The cancellation token.
         /// </param>
-        Task<HttpOperationResponse<TeamModel>> PutManagerWithHttpMessagesAsync(long id, long consultantId, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<ContosoConsultancyRestModelsTeamsTeamModel>> PutManagerWithHttpMessagesAsync(long id, long consultantId, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
         /// </param>
         /// <param name='cancellationToken'>
         /// The cancellation token.
         /// </param>
-        Task<HttpOperationResponse<IList<TeamModel>>> GetTeamsWithHttpMessagesAsync(Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<IList<ContosoConsultancyRestModelsTeamsTeamModel>>> GetTeamsWithHttpMessagesAsync(Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <param name='name'>
         /// </param>
         /// <param name='customHeaders'>
@@ -65,7 +65,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
         /// <param name='cancellationToken'>
         /// The cancellation token.
         /// </param>
-        Task<HttpOperationResponse<TeamModel>> PostTeamWithHttpMessagesAsync(string name, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<ContosoConsultancyRestModelsTeamsTeamModel>> PostTeamWithHttpMessagesAsync(string name, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <param name='id'>
         /// </param>
         /// <param name='customHeaders'>
@@ -74,7 +74,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
         /// <param name='cancellationToken'>
         /// The cancellation token.
         /// </param>
-        Task<HttpOperationResponse<TeamModel>> GetTeamWithHttpMessagesAsync(long id, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<ContosoConsultancyRestModelsTeamsTeamModel>> GetTeamWithHttpMessagesAsync(long id, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <param name='id'>
         /// </param>
         /// <param name='customHeaders'>
@@ -83,6 +83,6 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
         /// <param name='cancellationToken'>
         /// The cancellation token.
         /// </param>
-        Task<HttpOperationResponse<TeamModel>> DeleteTeamWithHttpMessagesAsync(long id, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<ContosoConsultancyRestModelsTeamsTeamModel>> DeleteTeamWithHttpMessagesAsync(long id, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
     }
 }

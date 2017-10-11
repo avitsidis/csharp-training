@@ -165,7 +165,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<IList<CustomerModel>>> GetTopClientWithHttpMessagesAsync(int numberOfClients, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<IList<ContosoConsultancyRestModelsDashboardCustomerModel>>> GetTopClientWithHttpMessagesAsync(int numberOfClients, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;
@@ -245,7 +245,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
                 throw ex;
             }
             // Create Result
-            var _result = new HttpOperationResponse<IList<CustomerModel>>();
+            var _result = new HttpOperationResponse<IList<ContosoConsultancyRestModelsDashboardCustomerModel>>();
             _result.Request = _httpRequest;
             _result.Response = _httpResponse;
             // Deserialize Response
@@ -254,7 +254,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = SafeJsonConvert.DeserializeObject<IList<CustomerModel>>(_responseContent, this.Client.DeserializationSettings);
+                    _result.Body = SafeJsonConvert.DeserializeObject<IList<ContosoConsultancyRestModelsDashboardCustomerModel>>(_responseContent, this.Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {
@@ -284,7 +284,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<IList<MissionModel>>> GetNewestMissionWithHttpMessagesAsync(int numberOfMissions, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<IList<ContosoConsultancyRestModelsDashboardMissionModel>>> GetNewestMissionWithHttpMessagesAsync(int numberOfMissions, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;
@@ -364,7 +364,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
                 throw ex;
             }
             // Create Result
-            var _result = new HttpOperationResponse<IList<MissionModel>>();
+            var _result = new HttpOperationResponse<IList<ContosoConsultancyRestModelsDashboardMissionModel>>();
             _result.Request = _httpRequest;
             _result.Response = _httpResponse;
             // Deserialize Response
@@ -373,7 +373,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = SafeJsonConvert.DeserializeObject<IList<MissionModel>>(_responseContent, this.Client.DeserializationSettings);
+                    _result.Body = SafeJsonConvert.DeserializeObject<IList<ContosoConsultancyRestModelsDashboardMissionModel>>(_responseContent, this.Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {
@@ -401,7 +401,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<IList<KeyValuePairInt32Int32>>> GetHiredEmployeeByYearWithHttpMessagesAsync(Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<IList<SystemCollectionsGenericKeyValuePairSystemInt32SystemInt32>>> GetHiredEmployeeByYearWithHttpMessagesAsync(Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;
@@ -474,7 +474,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
                 throw ex;
             }
             // Create Result
-            var _result = new HttpOperationResponse<IList<KeyValuePairInt32Int32>>();
+            var _result = new HttpOperationResponse<IList<SystemCollectionsGenericKeyValuePairSystemInt32SystemInt32>>();
             _result.Request = _httpRequest;
             _result.Response = _httpResponse;
             // Deserialize Response
@@ -483,7 +483,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = SafeJsonConvert.DeserializeObject<IList<KeyValuePairInt32Int32>>(_responseContent, this.Client.DeserializationSettings);
+                    _result.Body = SafeJsonConvert.DeserializeObject<IList<SystemCollectionsGenericKeyValuePairSystemInt32SystemInt32>>(_responseContent, this.Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {

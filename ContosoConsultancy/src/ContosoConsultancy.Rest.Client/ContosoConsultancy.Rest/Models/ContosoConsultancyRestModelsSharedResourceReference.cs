@@ -11,17 +11,19 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest.Models
     using Microsoft.Rest;
     using Microsoft.Rest.Serialization;
 
-    public partial class ResourceReference
+    public partial class ContosoConsultancyRestModelsSharedResourceReference
     {
         /// <summary>
-        /// Initializes a new instance of the ResourceReference class.
+        /// Initializes a new instance of the
+        /// ContosoConsultancyRestModelsSharedResourceReference class.
         /// </summary>
-        public ResourceReference() { }
+        public ContosoConsultancyRestModelsSharedResourceReference() { }
 
         /// <summary>
-        /// Initializes a new instance of the ResourceReference class.
+        /// Initializes a new instance of the
+        /// ContosoConsultancyRestModelsSharedResourceReference class.
         /// </summary>
-        public ResourceReference(long? id = default(long?), string href = default(string))
+        public ContosoConsultancyRestModelsSharedResourceReference(long? id = default(long?), string href = default(string))
         {
             Id = id;
             Href = href;

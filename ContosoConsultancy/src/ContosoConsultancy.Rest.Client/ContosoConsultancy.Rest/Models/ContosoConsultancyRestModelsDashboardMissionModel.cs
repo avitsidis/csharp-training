@@ -11,17 +11,19 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest.Models
     using Microsoft.Rest;
     using Microsoft.Rest.Serialization;
 
-    public partial class MissionModel
+    public partial class ContosoConsultancyRestModelsDashboardMissionModel
     {
         /// <summary>
-        /// Initializes a new instance of the MissionModel class.
+        /// Initializes a new instance of the
+        /// ContosoConsultancyRestModelsDashboardMissionModel class.
         /// </summary>
-        public MissionModel() { }
+        public ContosoConsultancyRestModelsDashboardMissionModel() { }
 
         /// <summary>
-        /// Initializes a new instance of the MissionModel class.
+        /// Initializes a new instance of the
+        /// ContosoConsultancyRestModelsDashboardMissionModel class.
         /// </summary>
-        public MissionModel(long? id = default(long?), long? consultantId = default(long?), long? customerId = default(long?), string consultantFullName = default(string), string customer = default(string), string country = default(string), DateTime? startDate = default(DateTime?))
+        public ContosoConsultancyRestModelsDashboardMissionModel(long? id = default(long?), long? consultantId = default(long?), long? customerId = default(long?), string consultantFullName = default(string), string customer = default(string), string country = default(string), DateTime? startDate = default(DateTime?))
         {
             Id = id;
             ConsultantId = consultantId;

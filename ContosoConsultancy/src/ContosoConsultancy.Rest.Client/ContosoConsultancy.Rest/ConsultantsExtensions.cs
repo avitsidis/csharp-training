@@ -26,7 +26,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
             /// </param>
             /// <param name='searchteamName'>
             /// </param>
-            public static IList<ConsultantModel> GetConsultants(this IConsultants operations, string searchname = default(string), string searchfirstName = default(string), string searchteamName = default(string))
+            public static IList<ContosoConsultancyRestModelsConsultantsConsultantModel> GetConsultants(this IConsultants operations, string searchname = default(string), string searchfirstName = default(string), string searchteamName = default(string))
             {
                 return Task.Factory.StartNew(s => ((IConsultants)s).GetConsultantsAsync(searchname, searchfirstName, searchteamName), operations, CancellationToken.None, TaskCreationOptions.None, TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
@@ -43,7 +43,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<IList<ConsultantModel>> GetConsultantsAsync(this IConsultants operations, string searchname = default(string), string searchfirstName = default(string), string searchteamName = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<IList<ContosoConsultancyRestModelsConsultantsConsultantModel>> GetConsultantsAsync(this IConsultants operations, string searchname = default(string), string searchfirstName = default(string), string searchteamName = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.GetConsultantsWithHttpMessagesAsync(searchname, searchfirstName, searchteamName, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -56,7 +56,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
             /// </param>
             /// <param name='createConsultant'>
             /// </param>
-            public static ConsultantModel PostConsultant(this IConsultants operations, CreateConsultantModel createConsultant)
+            public static ContosoConsultancyRestModelsConsultantsConsultantModel PostConsultant(this IConsultants operations, ContosoConsultancyRestModelsConsultantsCreateConsultantModel createConsultant)
             {
                 return Task.Factory.StartNew(s => ((IConsultants)s).PostConsultantAsync(createConsultant), operations, CancellationToken.None, TaskCreationOptions.None, TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
@@ -69,7 +69,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<ConsultantModel> PostConsultantAsync(this IConsultants operations, CreateConsultantModel createConsultant, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<ContosoConsultancyRestModelsConsultantsConsultantModel> PostConsultantAsync(this IConsultants operations, ContosoConsultancyRestModelsConsultantsCreateConsultantModel createConsultant, CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.PostConsultantWithHttpMessagesAsync(createConsultant, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -82,7 +82,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
             /// </param>
             /// <param name='id'>
             /// </param>
-            public static ConsultantModel GetConsultant(this IConsultants operations, long id)
+            public static ContosoConsultancyRestModelsConsultantsConsultantModel GetConsultant(this IConsultants operations, long id)
             {
                 return Task.Factory.StartNew(s => ((IConsultants)s).GetConsultantAsync(id), operations, CancellationToken.None, TaskCreationOptions.None, TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
@@ -95,7 +95,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<ConsultantModel> GetConsultantAsync(this IConsultants operations, long id, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<ContosoConsultancyRestModelsConsultantsConsultantModel> GetConsultantAsync(this IConsultants operations, long id, CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.GetConsultantWithHttpMessagesAsync(id, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -108,7 +108,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
             /// </param>
             /// <param name='id'>
             /// </param>
-            public static ConsultantModel DeleteConsultant(this IConsultants operations, long id)
+            public static ContosoConsultancyRestModelsConsultantsConsultantModel DeleteConsultant(this IConsultants operations, long id)
             {
                 return Task.Factory.StartNew(s => ((IConsultants)s).DeleteConsultantAsync(id), operations, CancellationToken.None, TaskCreationOptions.None, TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
@@ -121,7 +121,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<ConsultantModel> DeleteConsultantAsync(this IConsultants operations, long id, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<ContosoConsultancyRestModelsConsultantsConsultantModel> DeleteConsultantAsync(this IConsultants operations, long id, CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.DeleteConsultantWithHttpMessagesAsync(id, null, cancellationToken).ConfigureAwait(false))
                 {

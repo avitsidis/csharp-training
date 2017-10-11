@@ -11,17 +11,21 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest.Models
     using Microsoft.Rest;
     using Microsoft.Rest.Serialization;
 
-    public partial class CreateConsultantModel
+    public partial class ContosoConsultancyRestModelsConsultantsCreateConsultantModel
     {
         /// <summary>
-        /// Initializes a new instance of the CreateConsultantModel class.
+        /// Initializes a new instance of the
+        /// ContosoConsultancyRestModelsConsultantsCreateConsultantModel
+        /// class.
         /// </summary>
-        public CreateConsultantModel() { }
+        public ContosoConsultancyRestModelsConsultantsCreateConsultantModel() { }
 
         /// <summary>
-        /// Initializes a new instance of the CreateConsultantModel class.
+        /// Initializes a new instance of the
+        /// ContosoConsultancyRestModelsConsultantsCreateConsultantModel
+        /// class.
         /// </summary>
-        public CreateConsultantModel(string name, string firstName, DateTime birthDate, DateTime hireDate, DateTime? disengagedDate = default(DateTime?))
+        public ContosoConsultancyRestModelsConsultantsCreateConsultantModel(string name, string firstName, DateTime birthDate, DateTime hireDate, DateTime? disengagedDate = default(DateTime?))
         {
             Name = name;
             FirstName = firstName;

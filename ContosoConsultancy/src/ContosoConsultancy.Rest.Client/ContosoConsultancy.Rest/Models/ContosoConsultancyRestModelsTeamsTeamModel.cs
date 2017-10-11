@@ -11,17 +11,19 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest.Models
     using Microsoft.Rest;
     using Microsoft.Rest.Serialization;
 
-    public partial class TeamModel
+    public partial class ContosoConsultancyRestModelsTeamsTeamModel
     {
         /// <summary>
-        /// Initializes a new instance of the TeamModel class.
+        /// Initializes a new instance of the
+        /// ContosoConsultancyRestModelsTeamsTeamModel class.
         /// </summary>
-        public TeamModel() { }
+        public ContosoConsultancyRestModelsTeamsTeamModel() { }
 
         /// <summary>
-        /// Initializes a new instance of the TeamModel class.
+        /// Initializes a new instance of the
+        /// ContosoConsultancyRestModelsTeamsTeamModel class.
         /// </summary>
-        public TeamModel(long? id = default(long?), string name = default(string), ResourceReference manager = default(ResourceReference), IList<ResourceReference> members = default(IList<ResourceReference>))
+        public ContosoConsultancyRestModelsTeamsTeamModel(long? id = default(long?), string name = default(string), ContosoConsultancyRestModelsSharedResourceReference manager = default(ContosoConsultancyRestModelsSharedResourceReference), IList<ContosoConsultancyRestModelsSharedResourceReference> members = default(IList<ContosoConsultancyRestModelsSharedResourceReference>))
         {
             Id = id;
             Name = name;
@@ -42,12 +44,12 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "Manager")]
-        public ResourceReference Manager { get; set; }
+        public ContosoConsultancyRestModelsSharedResourceReference Manager { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "Members")]
-        public IList<ResourceReference> Members { get; set; }
+        public IList<ContosoConsultancyRestModelsSharedResourceReference> Members { get; set; }
 
     }
 }

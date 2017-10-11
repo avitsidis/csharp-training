@@ -32,7 +32,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
         /// <param name='cancellationToken'>
         /// The cancellation token.
         /// </param>
-        Task<HttpOperationResponse<IList<CustomerModel>>> GetTopClientWithHttpMessagesAsync(int numberOfClients, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<IList<ContosoConsultancyRestModelsDashboardCustomerModel>>> GetTopClientWithHttpMessagesAsync(int numberOfClients, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <param name='numberOfMissions'>
         /// </param>
         /// <param name='customHeaders'>
@@ -41,13 +41,13 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
         /// <param name='cancellationToken'>
         /// The cancellation token.
         /// </param>
-        Task<HttpOperationResponse<IList<MissionModel>>> GetNewestMissionWithHttpMessagesAsync(int numberOfMissions, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<IList<ContosoConsultancyRestModelsDashboardMissionModel>>> GetNewestMissionWithHttpMessagesAsync(int numberOfMissions, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
         /// </param>
         /// <param name='cancellationToken'>
         /// The cancellation token.
         /// </param>
-        Task<HttpOperationResponse<IList<KeyValuePairInt32Int32>>> GetHiredEmployeeByYearWithHttpMessagesAsync(Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<IList<SystemCollectionsGenericKeyValuePairSystemInt32SystemInt32>>> GetHiredEmployeeByYearWithHttpMessagesAsync(Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
     }
 }

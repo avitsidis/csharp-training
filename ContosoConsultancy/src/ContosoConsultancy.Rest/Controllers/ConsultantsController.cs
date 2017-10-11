@@ -24,7 +24,7 @@ namespace ContosoConsultancy.Rest.Controllers
         public IEnumerable<ConsultantModel> GetConsultants([FromUri]SearchConsultantModel search)
         {
             IQueryable<Consultant> consultant = db.Consultants;
-            //TODO 1.0 somenthing must be wrong here !
+            //TODO 1.0 something must be wrong here !
             if (!string.IsNullOrEmpty(search.Name))
             {
                 consultant.Where(c => c.Name.ToLower().Contains(search.Name.ToLower()));

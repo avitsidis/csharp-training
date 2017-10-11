@@ -59,7 +59,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<IList<ConsultantModel>>> GetConsultantsWithHttpMessagesAsync(string searchname = default(string), string searchfirstName = default(string), string searchteamName = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<IList<ContosoConsultancyRestModelsConsultantsConsultantModel>>> GetConsultantsWithHttpMessagesAsync(string searchname = default(string), string searchfirstName = default(string), string searchteamName = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;
@@ -152,7 +152,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
                 throw ex;
             }
             // Create Result
-            var _result = new HttpOperationResponse<IList<ConsultantModel>>();
+            var _result = new HttpOperationResponse<IList<ContosoConsultancyRestModelsConsultantsConsultantModel>>();
             _result.Request = _httpRequest;
             _result.Response = _httpResponse;
             // Deserialize Response
@@ -161,7 +161,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = SafeJsonConvert.DeserializeObject<IList<ConsultantModel>>(_responseContent, this.Client.DeserializationSettings);
+                    _result.Body = SafeJsonConvert.DeserializeObject<IList<ContosoConsultancyRestModelsConsultantsConsultantModel>>(_responseContent, this.Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {
@@ -191,7 +191,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<ConsultantModel>> PostConsultantWithHttpMessagesAsync(CreateConsultantModel createConsultant, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<ContosoConsultancyRestModelsConsultantsConsultantModel>> PostConsultantWithHttpMessagesAsync(ContosoConsultancyRestModelsConsultantsCreateConsultantModel createConsultant, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             if (createConsultant == null)
             {
@@ -279,7 +279,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
                 throw ex;
             }
             // Create Result
-            var _result = new HttpOperationResponse<ConsultantModel>();
+            var _result = new HttpOperationResponse<ContosoConsultancyRestModelsConsultantsConsultantModel>();
             _result.Request = _httpRequest;
             _result.Response = _httpResponse;
             // Deserialize Response
@@ -288,7 +288,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = SafeJsonConvert.DeserializeObject<ConsultantModel>(_responseContent, this.Client.DeserializationSettings);
+                    _result.Body = SafeJsonConvert.DeserializeObject<ContosoConsultancyRestModelsConsultantsConsultantModel>(_responseContent, this.Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {
@@ -318,7 +318,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<ConsultantModel>> GetConsultantWithHttpMessagesAsync(long id, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<ContosoConsultancyRestModelsConsultantsConsultantModel>> GetConsultantWithHttpMessagesAsync(long id, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;
@@ -393,7 +393,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
                 throw ex;
             }
             // Create Result
-            var _result = new HttpOperationResponse<ConsultantModel>();
+            var _result = new HttpOperationResponse<ContosoConsultancyRestModelsConsultantsConsultantModel>();
             _result.Request = _httpRequest;
             _result.Response = _httpResponse;
             // Deserialize Response
@@ -402,7 +402,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = SafeJsonConvert.DeserializeObject<ConsultantModel>(_responseContent, this.Client.DeserializationSettings);
+                    _result.Body = SafeJsonConvert.DeserializeObject<ContosoConsultancyRestModelsConsultantsConsultantModel>(_responseContent, this.Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {
@@ -432,7 +432,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<ConsultantModel>> DeleteConsultantWithHttpMessagesAsync(long id, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<ContosoConsultancyRestModelsConsultantsConsultantModel>> DeleteConsultantWithHttpMessagesAsync(long id, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;
@@ -507,7 +507,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
                 throw ex;
             }
             // Create Result
-            var _result = new HttpOperationResponse<ConsultantModel>();
+            var _result = new HttpOperationResponse<ContosoConsultancyRestModelsConsultantsConsultantModel>();
             _result.Request = _httpRequest;
             _result.Response = _httpResponse;
             // Deserialize Response
@@ -516,7 +516,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = SafeJsonConvert.DeserializeObject<ConsultantModel>(_responseContent, this.Client.DeserializationSettings);
+                    _result.Body = SafeJsonConvert.DeserializeObject<ContosoConsultancyRestModelsConsultantsConsultantModel>(_responseContent, this.Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {

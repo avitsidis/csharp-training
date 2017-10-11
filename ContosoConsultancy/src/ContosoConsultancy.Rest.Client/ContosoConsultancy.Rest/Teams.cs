@@ -57,7 +57,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<TeamModel>> PostMemberWithHttpMessagesAsync(long id, long consultantId, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<ContosoConsultancyRestModelsTeamsTeamModel>> PostMemberWithHttpMessagesAsync(long id, long consultantId, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;
@@ -139,7 +139,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
                 throw ex;
             }
             // Create Result
-            var _result = new HttpOperationResponse<TeamModel>();
+            var _result = new HttpOperationResponse<ContosoConsultancyRestModelsTeamsTeamModel>();
             _result.Request = _httpRequest;
             _result.Response = _httpResponse;
             // Deserialize Response
@@ -148,7 +148,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = SafeJsonConvert.DeserializeObject<TeamModel>(_responseContent, this.Client.DeserializationSettings);
+                    _result.Body = SafeJsonConvert.DeserializeObject<ContosoConsultancyRestModelsTeamsTeamModel>(_responseContent, this.Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {
@@ -180,7 +180,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<TeamModel>> DeleteMemberWithHttpMessagesAsync(long id, long consultantId, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<ContosoConsultancyRestModelsTeamsTeamModel>> DeleteMemberWithHttpMessagesAsync(long id, long consultantId, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;
@@ -257,7 +257,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
                 throw ex;
             }
             // Create Result
-            var _result = new HttpOperationResponse<TeamModel>();
+            var _result = new HttpOperationResponse<ContosoConsultancyRestModelsTeamsTeamModel>();
             _result.Request = _httpRequest;
             _result.Response = _httpResponse;
             // Deserialize Response
@@ -266,7 +266,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = SafeJsonConvert.DeserializeObject<TeamModel>(_responseContent, this.Client.DeserializationSettings);
+                    _result.Body = SafeJsonConvert.DeserializeObject<ContosoConsultancyRestModelsTeamsTeamModel>(_responseContent, this.Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {
@@ -298,7 +298,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<TeamModel>> PutManagerWithHttpMessagesAsync(long id, long consultantId, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<ContosoConsultancyRestModelsTeamsTeamModel>> PutManagerWithHttpMessagesAsync(long id, long consultantId, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;
@@ -375,7 +375,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
                 throw ex;
             }
             // Create Result
-            var _result = new HttpOperationResponse<TeamModel>();
+            var _result = new HttpOperationResponse<ContosoConsultancyRestModelsTeamsTeamModel>();
             _result.Request = _httpRequest;
             _result.Response = _httpResponse;
             // Deserialize Response
@@ -384,7 +384,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = SafeJsonConvert.DeserializeObject<TeamModel>(_responseContent, this.Client.DeserializationSettings);
+                    _result.Body = SafeJsonConvert.DeserializeObject<ContosoConsultancyRestModelsTeamsTeamModel>(_responseContent, this.Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {
@@ -412,7 +412,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<IList<TeamModel>>> GetTeamsWithHttpMessagesAsync(Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<IList<ContosoConsultancyRestModelsTeamsTeamModel>>> GetTeamsWithHttpMessagesAsync(Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;
@@ -485,7 +485,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
                 throw ex;
             }
             // Create Result
-            var _result = new HttpOperationResponse<IList<TeamModel>>();
+            var _result = new HttpOperationResponse<IList<ContosoConsultancyRestModelsTeamsTeamModel>>();
             _result.Request = _httpRequest;
             _result.Response = _httpResponse;
             // Deserialize Response
@@ -494,7 +494,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = SafeJsonConvert.DeserializeObject<IList<TeamModel>>(_responseContent, this.Client.DeserializationSettings);
+                    _result.Body = SafeJsonConvert.DeserializeObject<IList<ContosoConsultancyRestModelsTeamsTeamModel>>(_responseContent, this.Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {
@@ -524,7 +524,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<TeamModel>> PostTeamWithHttpMessagesAsync(string name, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<ContosoConsultancyRestModelsTeamsTeamModel>> PostTeamWithHttpMessagesAsync(string name, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             if (name == null)
             {
@@ -611,7 +611,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
                 throw ex;
             }
             // Create Result
-            var _result = new HttpOperationResponse<TeamModel>();
+            var _result = new HttpOperationResponse<ContosoConsultancyRestModelsTeamsTeamModel>();
             _result.Request = _httpRequest;
             _result.Response = _httpResponse;
             // Deserialize Response
@@ -620,7 +620,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = SafeJsonConvert.DeserializeObject<TeamModel>(_responseContent, this.Client.DeserializationSettings);
+                    _result.Body = SafeJsonConvert.DeserializeObject<ContosoConsultancyRestModelsTeamsTeamModel>(_responseContent, this.Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {
@@ -650,7 +650,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<TeamModel>> GetTeamWithHttpMessagesAsync(long id, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<ContosoConsultancyRestModelsTeamsTeamModel>> GetTeamWithHttpMessagesAsync(long id, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;
@@ -725,7 +725,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
                 throw ex;
             }
             // Create Result
-            var _result = new HttpOperationResponse<TeamModel>();
+            var _result = new HttpOperationResponse<ContosoConsultancyRestModelsTeamsTeamModel>();
             _result.Request = _httpRequest;
             _result.Response = _httpResponse;
             // Deserialize Response
@@ -734,7 +734,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = SafeJsonConvert.DeserializeObject<TeamModel>(_responseContent, this.Client.DeserializationSettings);
+                    _result.Body = SafeJsonConvert.DeserializeObject<ContosoConsultancyRestModelsTeamsTeamModel>(_responseContent, this.Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {
@@ -764,7 +764,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<TeamModel>> DeleteTeamWithHttpMessagesAsync(long id, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<ContosoConsultancyRestModelsTeamsTeamModel>> DeleteTeamWithHttpMessagesAsync(long id, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;
@@ -839,7 +839,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
                 throw ex;
             }
             // Create Result
-            var _result = new HttpOperationResponse<TeamModel>();
+            var _result = new HttpOperationResponse<ContosoConsultancyRestModelsTeamsTeamModel>();
             _result.Request = _httpRequest;
             _result.Response = _httpResponse;
             // Deserialize Response
@@ -848,7 +848,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = SafeJsonConvert.DeserializeObject<TeamModel>(_responseContent, this.Client.DeserializationSettings);
+                    _result.Body = SafeJsonConvert.DeserializeObject<ContosoConsultancyRestModelsTeamsTeamModel>(_responseContent, this.Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {

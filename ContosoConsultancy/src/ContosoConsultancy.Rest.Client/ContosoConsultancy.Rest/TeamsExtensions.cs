@@ -24,7 +24,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
             /// </param>
             /// <param name='consultantId'>
             /// </param>
-            public static TeamModel PostMember(this ITeams operations, long id, long consultantId)
+            public static ContosoConsultancyRestModelsTeamsTeamModel PostMember(this ITeams operations, long id, long consultantId)
             {
                 return Task.Factory.StartNew(s => ((ITeams)s).PostMemberAsync(id, consultantId), operations, CancellationToken.None, TaskCreationOptions.None, TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
@@ -39,7 +39,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<TeamModel> PostMemberAsync(this ITeams operations, long id, long consultantId, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<ContosoConsultancyRestModelsTeamsTeamModel> PostMemberAsync(this ITeams operations, long id, long consultantId, CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.PostMemberWithHttpMessagesAsync(id, consultantId, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -54,7 +54,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
             /// </param>
             /// <param name='consultantId'>
             /// </param>
-            public static TeamModel DeleteMember(this ITeams operations, long id, long consultantId)
+            public static ContosoConsultancyRestModelsTeamsTeamModel DeleteMember(this ITeams operations, long id, long consultantId)
             {
                 return Task.Factory.StartNew(s => ((ITeams)s).DeleteMemberAsync(id, consultantId), operations, CancellationToken.None, TaskCreationOptions.None, TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
@@ -69,7 +69,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<TeamModel> DeleteMemberAsync(this ITeams operations, long id, long consultantId, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<ContosoConsultancyRestModelsTeamsTeamModel> DeleteMemberAsync(this ITeams operations, long id, long consultantId, CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.DeleteMemberWithHttpMessagesAsync(id, consultantId, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -84,7 +84,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
             /// </param>
             /// <param name='consultantId'>
             /// </param>
-            public static TeamModel PutManager(this ITeams operations, long id, long consultantId)
+            public static ContosoConsultancyRestModelsTeamsTeamModel PutManager(this ITeams operations, long id, long consultantId)
             {
                 return Task.Factory.StartNew(s => ((ITeams)s).PutManagerAsync(id, consultantId), operations, CancellationToken.None, TaskCreationOptions.None, TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
@@ -99,7 +99,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<TeamModel> PutManagerAsync(this ITeams operations, long id, long consultantId, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<ContosoConsultancyRestModelsTeamsTeamModel> PutManagerAsync(this ITeams operations, long id, long consultantId, CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.PutManagerWithHttpMessagesAsync(id, consultantId, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -110,7 +110,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
-            public static IList<TeamModel> GetTeams(this ITeams operations)
+            public static IList<ContosoConsultancyRestModelsTeamsTeamModel> GetTeams(this ITeams operations)
             {
                 return Task.Factory.StartNew(s => ((ITeams)s).GetTeamsAsync(), operations, CancellationToken.None, TaskCreationOptions.None, TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
@@ -121,7 +121,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<IList<TeamModel>> GetTeamsAsync(this ITeams operations, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<IList<ContosoConsultancyRestModelsTeamsTeamModel>> GetTeamsAsync(this ITeams operations, CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.GetTeamsWithHttpMessagesAsync(null, cancellationToken).ConfigureAwait(false))
                 {
@@ -134,7 +134,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
             /// </param>
             /// <param name='name'>
             /// </param>
-            public static TeamModel PostTeam(this ITeams operations, string name)
+            public static ContosoConsultancyRestModelsTeamsTeamModel PostTeam(this ITeams operations, string name)
             {
                 return Task.Factory.StartNew(s => ((ITeams)s).PostTeamAsync(name), operations, CancellationToken.None, TaskCreationOptions.None, TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
@@ -147,7 +147,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<TeamModel> PostTeamAsync(this ITeams operations, string name, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<ContosoConsultancyRestModelsTeamsTeamModel> PostTeamAsync(this ITeams operations, string name, CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.PostTeamWithHttpMessagesAsync(name, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -160,7 +160,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
             /// </param>
             /// <param name='id'>
             /// </param>
-            public static TeamModel GetTeam(this ITeams operations, long id)
+            public static ContosoConsultancyRestModelsTeamsTeamModel GetTeam(this ITeams operations, long id)
             {
                 return Task.Factory.StartNew(s => ((ITeams)s).GetTeamAsync(id), operations, CancellationToken.None, TaskCreationOptions.None, TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
@@ -173,7 +173,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<TeamModel> GetTeamAsync(this ITeams operations, long id, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<ContosoConsultancyRestModelsTeamsTeamModel> GetTeamAsync(this ITeams operations, long id, CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.GetTeamWithHttpMessagesAsync(id, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -186,7 +186,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
             /// </param>
             /// <param name='id'>
             /// </param>
-            public static TeamModel DeleteTeam(this ITeams operations, long id)
+            public static ContosoConsultancyRestModelsTeamsTeamModel DeleteTeam(this ITeams operations, long id)
             {
                 return Task.Factory.StartNew(s => ((ITeams)s).DeleteTeamAsync(id), operations, CancellationToken.None, TaskCreationOptions.None, TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
@@ -199,7 +199,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<TeamModel> DeleteTeamAsync(this ITeams operations, long id, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<ContosoConsultancyRestModelsTeamsTeamModel> DeleteTeamAsync(this ITeams operations, long id, CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.DeleteTeamWithHttpMessagesAsync(id, null, cancellationToken).ConfigureAwait(false))
                 {

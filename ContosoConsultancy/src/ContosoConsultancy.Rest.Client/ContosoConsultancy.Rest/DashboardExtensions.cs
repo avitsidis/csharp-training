@@ -44,7 +44,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
             /// </param>
             /// <param name='numberOfClients'>
             /// </param>
-            public static IList<CustomerModel> GetTopClient(this IDashboard operations, int numberOfClients)
+            public static IList<ContosoConsultancyRestModelsDashboardCustomerModel> GetTopClient(this IDashboard operations, int numberOfClients)
             {
                 return Task.Factory.StartNew(s => ((IDashboard)s).GetTopClientAsync(numberOfClients), operations, CancellationToken.None, TaskCreationOptions.None, TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
@@ -57,7 +57,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<IList<CustomerModel>> GetTopClientAsync(this IDashboard operations, int numberOfClients, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<IList<ContosoConsultancyRestModelsDashboardCustomerModel>> GetTopClientAsync(this IDashboard operations, int numberOfClients, CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.GetTopClientWithHttpMessagesAsync(numberOfClients, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -70,7 +70,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
             /// </param>
             /// <param name='numberOfMissions'>
             /// </param>
-            public static IList<MissionModel> GetNewestMission(this IDashboard operations, int numberOfMissions)
+            public static IList<ContosoConsultancyRestModelsDashboardMissionModel> GetNewestMission(this IDashboard operations, int numberOfMissions)
             {
                 return Task.Factory.StartNew(s => ((IDashboard)s).GetNewestMissionAsync(numberOfMissions), operations, CancellationToken.None, TaskCreationOptions.None, TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
@@ -83,7 +83,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<IList<MissionModel>> GetNewestMissionAsync(this IDashboard operations, int numberOfMissions, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<IList<ContosoConsultancyRestModelsDashboardMissionModel>> GetNewestMissionAsync(this IDashboard operations, int numberOfMissions, CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.GetNewestMissionWithHttpMessagesAsync(numberOfMissions, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -94,7 +94,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
-            public static IList<KeyValuePairInt32Int32> GetHiredEmployeeByYear(this IDashboard operations)
+            public static IList<SystemCollectionsGenericKeyValuePairSystemInt32SystemInt32> GetHiredEmployeeByYear(this IDashboard operations)
             {
                 return Task.Factory.StartNew(s => ((IDashboard)s).GetHiredEmployeeByYearAsync(), operations, CancellationToken.None, TaskCreationOptions.None, TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
@@ -105,7 +105,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<IList<KeyValuePairInt32Int32>> GetHiredEmployeeByYearAsync(this IDashboard operations, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<IList<SystemCollectionsGenericKeyValuePairSystemInt32SystemInt32>> GetHiredEmployeeByYearAsync(this IDashboard operations, CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.GetHiredEmployeeByYearWithHttpMessagesAsync(null, cancellationToken).ConfigureAwait(false))
                 {

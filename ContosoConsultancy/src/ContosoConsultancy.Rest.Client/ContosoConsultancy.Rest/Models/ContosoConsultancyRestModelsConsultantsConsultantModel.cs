@@ -11,17 +11,19 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest.Models
     using Microsoft.Rest;
     using Microsoft.Rest.Serialization;
 
-    public partial class ConsultantModel
+    public partial class ContosoConsultancyRestModelsConsultantsConsultantModel
     {
         /// <summary>
-        /// Initializes a new instance of the ConsultantModel class.
+        /// Initializes a new instance of the
+        /// ContosoConsultancyRestModelsConsultantsConsultantModel class.
         /// </summary>
-        public ConsultantModel() { }
+        public ContosoConsultancyRestModelsConsultantsConsultantModel() { }
 
         /// <summary>
-        /// Initializes a new instance of the ConsultantModel class.
+        /// Initializes a new instance of the
+        /// ContosoConsultancyRestModelsConsultantsConsultantModel class.
         /// </summary>
-        public ConsultantModel(long? id = default(long?), string name = default(string), string firstName = default(string), DateTime? birthDate = default(DateTime?), DateTime? hireDate = default(DateTime?), DateTime? disengagedDate = default(DateTime?), ResourceReference teamReference = default(ResourceReference))
+        public ContosoConsultancyRestModelsConsultantsConsultantModel(long? id = default(long?), string name = default(string), string firstName = default(string), DateTime? birthDate = default(DateTime?), DateTime? hireDate = default(DateTime?), DateTime? disengagedDate = default(DateTime?), ContosoConsultancyRestModelsSharedResourceReference teamReference = default(ContosoConsultancyRestModelsSharedResourceReference))
         {
             Id = id;
             Name = name;
@@ -65,7 +67,7 @@ namespace ContosoConsultancy.Rest.Client.ContosoConsultancyRest.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "TeamReference")]
-        public ResourceReference TeamReference { get; set; }
+        public ContosoConsultancyRestModelsSharedResourceReference TeamReference { get; set; }
 
     }
 }
