@@ -124,6 +124,7 @@
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\TeamsController.cs" />
+    <Compile Include="Filters\SlowResultFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

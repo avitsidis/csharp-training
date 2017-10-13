@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoConsultancy.Rest.Cli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoConsultancy.Rest.Test", "test\ContosoConsultancy.Rest.Test\ContosoConsultancy.Rest.Test.csproj", "{DD4178D7-F471-49B0-A5EB-046A4E43CABC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoConsultancy.Administration.UI", "src\ContosoConsultancy.Administration.UI\ContosoConsultancy.Administration.UI.csproj", "{3B13B9E2-83AB-4FEE-8D21-C77D2DB419F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{DD4178D7-F471-49B0-A5EB-046A4E43CABC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD4178D7-F471-49B0-A5EB-046A4E43CABC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD4178D7-F471-49B0-A5EB-046A4E43CABC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B13B9E2-83AB-4FEE-8D21-C77D2DB419F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B13B9E2-83AB-4FEE-8D21-C77D2DB419F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B13B9E2-83AB-4FEE-8D21-C77D2DB419F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B13B9E2-83AB-4FEE-8D21-C77D2DB419F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
