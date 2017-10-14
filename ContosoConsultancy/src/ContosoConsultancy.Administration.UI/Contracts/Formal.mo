@@ -4,7 +4,7 @@ This Consulting Agreement (the “Agreement” or “Consulting Agreement”) st
 WHEREAS, the Consultant offers consulting services in the field of information and communication technologies; and
 WHEREAS, the Client desires to retain the services of the Consultant to render consulting services with regard to ICT according to the terms and conditions herein.
 
-Contoso Consultancy shall provide an employee of the company named {{ConsultantFirstName}} {{ConsultantLastName}}
+Contoso Consultancy shall provide an employee of the company named {{ConsultantName}}
 
 NOW, THEREFORE, In consideration of the mutual covenants and promises made by the parties hereto, the Consultant and the Client (individually, each a “Party” and collectively, the “Parties”) covenant and agree as follows:
 1. Term
@@ -54,7 +54,7 @@ Contoso Consultancy Responsible
 
 
 
-Contoso Consultancy Consultant : {{ConsultantFirstName}} {{ConsultantLastName}}
+Contoso Consultancy Consultant : {{ConsultantName}}
 
 
 Client : {{Customer}}

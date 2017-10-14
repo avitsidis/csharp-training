@@ -3,7 +3,7 @@ ContosoConsultancy light contract
 
 
 Company: {{Customer}}
-Consultant: {{ConsultantFirstName}} {{ConsultantLastName}}
+Consultant: {{ConsultantName}}
 Rate : {{Rate}}€/day
 Period: {{StartDate}} - {{EndDate}}
 
