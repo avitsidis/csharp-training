@@ -19,7 +19,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoConsultancy.Rest.Cli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoConsultancy.Rest.Test", "test\ContosoConsultancy.Rest.Test\ContosoConsultancy.Rest.Test.csproj", "{DD4178D7-F471-49B0-A5EB-046A4E43CABC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoConsultancy.Administration.UI", "src\ContosoConsultancy.Administration.UI\ContosoConsultancy.Administration.UI.csproj", "{3B13B9E2-83AB-4FEE-8D21-C77D2DB419F0}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ContractGenerator", "ContractGenerator", "{BDA9A5CE-3043-4F39-80FD-F82F2BEC558B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoConsultancy.ContractGenerator.UI", "src\ContosoConsultancy.ContractGenerator.UI\ContosoConsultancy.ContractGenerator.UI.csproj", "{3B13B9E2-83AB-4FEE-8D21-C77D2DB419F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoConsultancy.ContractGenerator.Core", "src\ContosoConsultancy.ContractGenerator.Core\ContosoConsultancy.ContractGenerator.Core.csproj", "{52FB0DC3-AAA1-48C9-9B11-40E9D73FBA75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,9 +55,17 @@ Global
 		{3B13B9E2-83AB-4FEE-8D21-C77D2DB419F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B13B9E2-83AB-4FEE-8D21-C77D2DB419F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B13B9E2-83AB-4FEE-8D21-C77D2DB419F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52FB0DC3-AAA1-48C9-9B11-40E9D73FBA75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52FB0DC3-AAA1-48C9-9B11-40E9D73FBA75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52FB0DC3-AAA1-48C9-9B11-40E9D73FBA75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52FB0DC3-AAA1-48C9-9B11-40E9D73FBA75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3B13B9E2-83AB-4FEE-8D21-C77D2DB419F0} = {BDA9A5CE-3043-4F39-80FD-F82F2BEC558B}
+		{52FB0DC3-AAA1-48C9-9B11-40E9D73FBA75} = {BDA9A5CE-3043-4F39-80FD-F82F2BEC558B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9BAFF41C-AF86-4467-8254-CFAB8E37E4AB}

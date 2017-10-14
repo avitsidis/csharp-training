@@ -1,12 +1,10 @@
-﻿using ContosoConsultancy.Administration.UI.Model;
+﻿using ContosoConsultancy.ContractGenerator.Core.Model;
 using ContosoConsultancy.Rest.Client.ContosoConsultancyRest;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ContosoConsultancy.Administration.UI
+namespace ContosoConsultancy.ContractGenerator.Core
 {
     public class ContosoConsultancyServiceProxy
     {

@@ -1,4 +1,4 @@
-﻿namespace ContosoConsultancy.Administration.UI
+﻿namespace ContosoConsultancy.ContractGenerator.UI
 {
     partial class Form1
     {

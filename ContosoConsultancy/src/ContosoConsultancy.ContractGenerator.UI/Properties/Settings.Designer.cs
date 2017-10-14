@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ContosoConsultancy.Administration.UI.Properties
+namespace ContosoConsultancy.ContractGenerator.UI.Properties
 {
 
 

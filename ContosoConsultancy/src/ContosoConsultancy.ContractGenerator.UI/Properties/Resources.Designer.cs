@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ContosoConsultancy.Administration.UI.Properties
+namespace ContosoConsultancy.ContractGenerator.UI.Properties
 {
 
 
@@ -44,7 +44,7 @@ namespace ContosoConsultancy.Administration.UI.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ContosoConsultancy.Administration.UI.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ContosoConsultancy.ContractGenerator.UI.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

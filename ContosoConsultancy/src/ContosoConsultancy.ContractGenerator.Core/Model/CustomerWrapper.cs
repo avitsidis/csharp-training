@@ -1,6 +1,6 @@
 ﻿using ContosoConsultancy.Rest.Client.ContosoConsultancyRest.Models;
 
-namespace ContosoConsultancy.Administration.UI.Model
+namespace ContosoConsultancy.ContractGenerator.Core.Model
 {
     public class CustomerWrapper
     {

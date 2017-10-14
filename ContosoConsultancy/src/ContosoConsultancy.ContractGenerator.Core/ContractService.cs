@@ -1,11 +1,11 @@
-﻿using ContosoConsultancy.Administration.UI.Model;
+﻿using ContosoConsultancy.ContractGenerator.Core.Model;
 using Nustache.Core;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ContosoConsultancy.Administration.UI
+namespace ContosoConsultancy.ContractGenerator.Core
 {
     public class ContractService : IContractService
     {

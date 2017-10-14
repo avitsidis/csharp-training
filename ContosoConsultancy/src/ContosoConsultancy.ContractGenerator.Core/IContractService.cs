@@ -1,8 +1,8 @@
-﻿using ContosoConsultancy.Administration.UI.Model;
+﻿using ContosoConsultancy.ContractGenerator.Core.Model;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace ContosoConsultancy.Administration.UI
+namespace ContosoConsultancy.ContractGenerator.Core
 {
     public interface IContractService
     {
