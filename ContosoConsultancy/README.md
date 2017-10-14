@@ -33,3 +33,23 @@ Consultant FullName, Customer Name, Customer country, Mission Start Date
 result must be ordered by mission Start date
 
 ## Exercice 3: async
+Company use a small winform application to generate contracts as pdf. That application has some issues we ask you to resolve
+
+Foo and Bar developped this application (Foo did ContosoConsultancy.ContractGenerator.UI and Bar ContosoConsultancy.ContractGenerator.Core)
+
+### 3.1 PDF Generation too slow
+
+Users complaint about huge pdf generation time.
+
+Bar explained that on his side everything is ok but he created an acync method on ContractService. Foo asks you to use this method as it should improve responsivity of the app.
+
+### 3.2 PDF Generation still too slow
+
+Foo was pretty sure using async will help responsivness. Bar explained you that Foo do not understand how async works and there is probably some issues on his code. 
+
+Bar asks you to review the code and adapt it to make it work correctly (using async methods)
+
+### 3.3 Improve start time
+
+Users would like to improve application start time. Foo asks you to show Form faster so that users can already encode some data even if everthing is not loaded yet.
+
