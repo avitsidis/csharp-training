@@ -24,17 +24,18 @@ namespace ContosoConsultancy.Rest.Controllers
         public IEnumerable<ConsultantModel> GetConsultants([FromUri]SearchConsultantModel search)
         {
             IQueryable<Consultant> consultant = db.Consultants;
-            //TODO 1.0 something must be wrong here !
             if (!string.IsNullOrEmpty(search.Name))
             {
-                consultant.Where(c => c.Name.ToLower().Contains(search.Name.ToLower()));
+                consultant = consultant.Where(c => c.Name.ToLower().Contains(search.Name.ToLower()));
             }
             if (!string.IsNullOrEmpty(search.FirstName))
             {
-                consultant.Where(c => c.FirstName.ToLower().Contains(search.FirstName.ToLower()));
+                consultant = consultant.Where(c => c.FirstName.ToLower().Contains(search.FirstName.ToLower()));
             }
-            //TODO 1.1 must be done on teamName too
-
+            if (!string.IsNullOrEmpty(search.TeamName))
+            {
+                consultant = consultant.Where(c => c.Team.Name == search.TeamName);
+            }
             return consultant.Select(Map.ToModel).ToList();
         }
 
