@@ -163,16 +163,15 @@ namespace ContosoConsultancy.Rest.Test.Controllers
                 var controller = GetDashboardController(consultants);
                 
                 //Act
-                var result = controller.GetHiredEmployeeByYear();
+                var hiredEmployeeByYear = controller
+                    .GetHiredEmployeeByYear()
+                    .ToDictionary(e => e.Key,e => e.Value);
                 
                 //Assert
-                Assert.IsType<OkNegotiatedContentResult<IEnumerable<KeyValuePair<int, int>>>>(result);
-                var hiredEmployeeByYear = (result as OkNegotiatedContentResult<IEnumerable<KeyValuePair<int, int>>>).Content.ToList();
-
                 for (int index = 0; index < numberOfYears; index++)
                 {
                     Assert.Contains(hiredEmployeeByYear, i => i.Key == years[index].Year);
-                    Assert.Equal(consultantByYear[index].Count, hiredEmployeeByYear[years[index].Year].Value);
+                    Assert.Equal(consultantByYear[index].Count, hiredEmployeeByYear[years[index].Year]);
                 }
             }
 
@@ -199,12 +198,10 @@ namespace ContosoConsultancy.Rest.Test.Controllers
                 var controller = GetDashboardController(consultants);
 
                 //Act
-                var result = controller.GetHiredEmployeeByYear();
+                var hiredEmployeeByYear = controller.GetHiredEmployeeByYear()
+                    .ToDictionary(e => e.Key, e => e.Value); ;
 
                 //Assert
-                Assert.IsType<OkNegotiatedContentResult<IEnumerable<KeyValuePair<int, int>>>>(result);
-                var hiredEmployeeByYear = (result as OkNegotiatedContentResult<IEnumerable<KeyValuePair<int, int>>>).Content.ToList();
-
                 Assert.Contains(hiredEmployeeByYear, i => i.Key == years[1].Year);
                 Assert.Equal(consultantByYear[1].Count, 0);
             }
