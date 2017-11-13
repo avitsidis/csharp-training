@@ -120,7 +120,7 @@ namespace ContosoConsultancy.Rest.Test.Controllers
                         new Mission{Id=1,StartDate=now.AddDays(-10),EndDate=now.AddDays(-5)}
                     }
                 };
-                var idleConsultant = new Consultant
+                var activeConsultant2 = new Consultant
                 {
                     Id = 2,
                     Missions = new List<Mission> {
@@ -128,11 +128,11 @@ namespace ContosoConsultancy.Rest.Test.Controllers
                         new Mission{Id=1,StartDate=now.AddDays(-10),EndDate=now.AddDays(-5)}
                     }
                 };
-                var controller = GetDashboardController(new List<Consultant> { activeConsultant, idleConsultant });
+                var controller = GetDashboardController(new List<Consultant> { activeConsultant, activeConsultant2 });
                 //Act
                 var count = controller.GetIdleEmployeeCount();
                 //Assert
-                Assert.Equal(2, count);
+                Assert.Equal(0, count);
             }
         }
 
