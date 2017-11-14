@@ -2,6 +2,7 @@
 using ContosoConsultancy.ContractGenerator.Core.IO;
 using ContosoConsultancy.ContractGenerator.Core.Model;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,11 +23,13 @@ namespace ContosoConsultancy.ContractGenerator.UI
             this.pdfService = pdfService;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private async void Form1_Load(object sender, EventArgs e)
         {
-            consultantCb.DataSource = contosoConsultancyServiceProxy.FetchConsultants();
-            customerCb.DataSource = contosoConsultancyServiceProxy.FetchCustomers();
+            consultantCb.DataSource = new List<string> {"Loading..." };
+            customerCb.DataSource = new List<string> { "Loading..." };
             contractCb.DataSource = contractService.ListContractTemplates();
+            consultantCb.DataSource = await contosoConsultancyServiceProxy.FetchConsultantsAsync();
+            customerCb.DataSource = await contosoConsultancyServiceProxy.FetchCustomersAsync();
         }
 
         private ContractData GetContractDataFromForm()
@@ -41,23 +44,23 @@ namespace ContosoConsultancy.ContractGenerator.UI
             };
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
             var result = saveFileDialog1.ShowDialog();
             if (saveFileDialog1.FileName != "")
             {
-                GenerateContract();
+                await GenerateContractAsync();
             }
         }
 
-        private void GenerateContract()
+        private async Task GenerateContractAsync()
         {
             try
             {
-                var content = BuildContractContent();
+                var content = await BuildContractContentAsync();
                 using (var fs = saveFileDialog1.OpenFile())
                 {
-                    WriteContract(fs, content);
+                    await WriteContractAsync(fs, content);
                     MessageBox.Show("Contract Successfully Generated");
                 }
             }
@@ -67,22 +70,16 @@ namespace ContosoConsultancy.ContractGenerator.UI
             }
         }
 
-        private void WriteContract(Stream destination, string content)
-        {
-            var timeout = 10000/*ms*/;
-            pdfService.WriteTextToPdfStreamAsync(destination, content).Wait(timeout);
-        }
-
         private async Task WriteContractAsync(Stream destination, string content)
         {
             await pdfService.WriteTextToPdfStreamAsync(destination, content);
         }
 
-        private string BuildContractContent()
+        private async Task<string> BuildContractContentAsync()
         {
             var contractData = GetContractDataFromForm();
             var contractTemplate = contractCb.SelectedValue.ToString();
-            var content = contractService.GetContractContent(contractTemplate, contractData);
+            var content = await contractService.GetContractContentAsync(contractTemplate, contractData);
             return content;
         }
     }
