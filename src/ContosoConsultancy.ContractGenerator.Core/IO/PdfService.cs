@@ -20,8 +20,8 @@ namespace ContosoConsultancy.ContractGenerator.Core.IO
                 {
                     document.Add(paragraph);
                 }
-                document.Close();
                 await writer.FlushAsync();
+                document.Close();
             }
         }
     }

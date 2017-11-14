@@ -3,6 +3,7 @@ using ContosoConsultancy.ContractGenerator.Core.IO;
 using ContosoConsultancy.ContractGenerator.Core.Model;
 using System;
 using System.IO;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ContosoConsultancy.ContractGenerator.UI
@@ -57,7 +58,7 @@ namespace ContosoConsultancy.ContractGenerator.UI
                 using (var fs = saveFileDialog1.OpenFile())
                 {
                     WriteContract(fs, content);
-                    toolStripStatusLabel1.Text = "Contract Successfully Generated";
+                    MessageBox.Show("Contract Successfully Generated");
                 }
             }
             catch (Exception ex)
@@ -70,6 +71,11 @@ namespace ContosoConsultancy.ContractGenerator.UI
         {
             var timeout = 10000/*ms*/;
             pdfService.WriteTextToPdfStreamAsync(destination, content).Wait(timeout);
+        }
+
+        private async Task WriteContractAsync(Stream destination, string content)
+        {
+            await pdfService.WriteTextToPdfStreamAsync(destination, content);
         }
 
         private string BuildContractContent()
