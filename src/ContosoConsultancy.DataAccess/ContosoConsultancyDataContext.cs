@@ -1,6 +1,7 @@
 ﻿using ContosoConsultancy.Core.Model;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using System.Diagnostics;
 
 namespace ContosoConsultancy.DataAccess
 {
@@ -32,9 +33,10 @@ namespace ContosoConsultancy.DataAccess
             modelBuilder.Entity<Mission>()
                 .HasMany<Competency>(c => c.Competencies)
                 .WithMany();
-
+#if DEBUG
+            Database.Log = (query) => Debug.Write(query);
+#endif
         }
-
 
     }
 }
