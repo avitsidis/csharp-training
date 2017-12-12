@@ -1,4 +1,8 @@
 # Csharp Training
+## Information
+### Database diagram
+![database](docs/images/ContosoConsultancy-Database.png)
+
 ## Some tips
 Location of where you have to fix or add some code are marked with Todos. Visual Studio has a 'Task List' windows that allows you to easily find theses todos. 
 ## Exercice 1 : Linq - Where clause
@@ -24,6 +28,7 @@ TIPS: Unemployed = No mission at all or all missions done.
 
 ### 2.2: Top 5 clients
 Provide biggest clients in terms of current active mission number.
+TIPS: Start from db.Missions
 
 ### 2.3: 3 Newest missions
 Provide the 3 latest missions. You must provide:
