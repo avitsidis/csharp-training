@@ -1,4 +1,6 @@
 # Csharp Training
+## Some tips
+Location of where you have to fix or add some code are marked with Todos. Visual Studio has a 'Task List' windows that allows you to easily find theses todos. 
 ## Exercice 1 : Linq - Where clause
 ### 1.1 Search consultant
 Users want to filter consultant based on their name and firstname(partial). Your colleague tried to implement it but it seems that the code always returns all records... 
@@ -16,17 +18,14 @@ Management would like a dashboard with real time company information such as:
 
 As the dashboard will be available in a web application you have to implement a Dashboard rest service.
 
-### 2.2: number of consultant without a mission
-You must provide the number of consultants that do not have an active mission at the moment.
-
-### 2.2: Number of hired employee each years
-You must provide a map where key is year and value is the number of employee hired that year
-optionnal: If there is no employee we want an item in the map with value 0
+### 2.1: number of consultant without a mission
+You must provide the number of consultants that do not have an active mission at the moment. 
+TIPS: Unemployed = No mission at all or all missions done.
 
 ### 2.2: Top 5 clients
-Provide biggest clients in terms of current mission number.
+Provide biggest clients in terms of current active mission number.
 
-### 2.2: 3 Newest missions
+### 2.3: 3 Newest missions
 Provide the 3 latest missions. You must provide:
 Consultant FullName, Customer Name, Customer country, Mission Start Date
 
@@ -53,3 +52,12 @@ Bar asks you to review the code and adapt it to make it work correctly (using as
 
 Users would like to improve application start time. Foo asks you to show Form faster so that users can already encode some data even if everthing is not loaded yet.
 
+## Additionnal exercices
+
+### 4.0 Slow web service
+The webservice was made slow on purpose (ensure async will be useful). How do you think this has been done ?
+
+## 4 Extra Linq Aggregation
+### 4.1 Number of hired employee each year
+You must provide a map where key is year and value is the number of employee hired that year
+If there is no employee we want an item in the map with value 0

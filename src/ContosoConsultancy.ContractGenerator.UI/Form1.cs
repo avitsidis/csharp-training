@@ -24,6 +24,7 @@ namespace ContosoConsultancy.ContractGenerator.UI
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //TODO 3.3: Improve start time
             consultantCb.DataSource = contosoConsultancyServiceProxy.FetchConsultants();
             customerCb.DataSource = contosoConsultancyServiceProxy.FetchCustomers();
             contractCb.DataSource = contractService.ListContractTemplates();
@@ -43,6 +44,7 @@ namespace ContosoConsultancy.ContractGenerator.UI
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //TODO 3.2: PDF Generation still too slow --> make all of this function and call stack async
             var result = saveFileDialog1.ShowDialog();
             if (saveFileDialog1.FileName != "")
             {
@@ -82,6 +84,7 @@ namespace ContosoConsultancy.ContractGenerator.UI
         {
             var contractData = GetContractDataFromForm();
             var contractTemplate = contractCb.SelectedValue.ToString();
+            //TODO 3.1: PDF Generation too slow --> use GetContractContentAsync and adapt code to make it work.
             var content = contractService.GetContractContent(contractTemplate, contractData);
             return content;
         }

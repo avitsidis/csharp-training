@@ -24,7 +24,7 @@ namespace ContosoConsultancy.Rest.Controllers
         public IEnumerable<ConsultantModel> GetConsultants([FromUri]SearchConsultantModel search)
         {
             IQueryable<Consultant> consultant = db.Consultants;
-            //TODO 1.0 something must be wrong here !
+            //TODO 1.1 something must be wrong here !
             if (!string.IsNullOrEmpty(search.Name))
             {
                 consultant.Where(c => c.Name.ToLower().Contains(search.Name.ToLower()));
@@ -33,7 +33,7 @@ namespace ContosoConsultancy.Rest.Controllers
             {
                 consultant.Where(c => c.FirstName.ToLower().Contains(search.FirstName.ToLower()));
             }
-            //TODO 1.1 must be done on teamName too
+            //TODO 1.2 team criteria should be implemented here
 
             return consultant.Select(Map.ToModel).ToList();
         }

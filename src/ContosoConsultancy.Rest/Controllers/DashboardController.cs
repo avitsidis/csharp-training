@@ -1,10 +1,7 @@
 ﻿using ContosoConsultancy.DataAccess;
 using ContosoConsultancy.Rest.Models.Dashboard;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Web.Http;
-using System.Web.Http.Description;
 
 namespace ContosoConsultancy.Rest.Controllers
 {
@@ -21,6 +18,7 @@ namespace ContosoConsultancy.Rest.Controllers
         [Route("idleEmployeeCount")]
         public int GetIdleEmployeeCount()
         {
+            //TODO 2.1: Number of consultant without a mission
             var count = 0;
             return count;
         }
@@ -28,6 +26,7 @@ namespace ContosoConsultancy.Rest.Controllers
         [Route("topClient")]
         public IEnumerable<CustomerModel> GetTopClient(int? numberOfClients)
         {
+            //TODO 2.2: Top 5 clients
             var result = new List<CustomerModel>();
             return result;
         }
@@ -35,6 +34,7 @@ namespace ContosoConsultancy.Rest.Controllers
         [Route("newestMissions")]
         public IEnumerable<MissionModel> GetNewestMission(int numberOfMissions)
         {
+            //TODO 2.3: 3 Newest missions
             var result = new List<MissionModel>();
             return result;
         }
@@ -43,6 +43,7 @@ namespace ContosoConsultancy.Rest.Controllers
         [Route("hiredEmployeeByYear")]
         public IEnumerable<KeyValuePair<int, int>> GetHiredEmployeeByYear()
         {
+            //TODO 4.1: Number of hired employee each year
             var result = new Dictionary<int, int>();
             return result;
         }
