@@ -75,11 +75,6 @@ namespace ContosoConsultancy.ContractGenerator.UI
             pdfService.WriteTextToPdfStreamAsync(destination, content).Wait(timeout);
         }
 
-        private async Task WriteContractAsync(Stream destination, string content)
-        {
-            await pdfService.WriteTextToPdfStreamAsync(destination, content);
-        }
-
         private string BuildContractContent()
         {
             var contractData = GetContractDataFromForm();
